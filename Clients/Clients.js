@@ -1,6 +1,6 @@
 const game
 
-game = require{'./GameEngine/GameEngine.js'};
+game = require('./GameEngine/GameEngine.js');
 
 game.createGame();
 

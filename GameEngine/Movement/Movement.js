@@ -1,4 +1,4 @@
-const {clientArray} = require{'./Client-Server/Server.js'};
+const {clientArray} = require('./Client-Server/Server.js');
 
 function travel(){
     for(var i = 0; i < clientArray.length; i++){
