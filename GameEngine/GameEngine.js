@@ -1,16 +1,25 @@
 
-const {addClient, createGame, joinGame} = require('./Client-Server/Server.js');
-const {getJSON} = require('./JSONFiles/Game.JSON');
+const {addClient, createGame, joinGame} = require('./Server/Server.js');
+const {getJSON} = require('./JSONReader/JSON.js');
 
 //import movement module into gameEngine
-const {groupMovement, vote} = require('./Movement/Movement.js');
+const {travel} = require('./Movement/Movement.js');
 
 // import combat module into game engine
 const {addCharacters, rollInitiative, characterTurn, characterCombat, combatMovement
       } = require('./Combat/Combat.js');
 
-function createGame(){
-    const game = getJSON();
-}
+const {currentPlace, currentDescriptions} = require('./Movement/Locations.js');
 
-module.exports = {groupMovement, vote, addCharacters}
+module.exports = {
+    addClient,
+    createGame, 
+    joinGame, 
+    travel,
+    rollInitiative,
+    sorting,
+    characterTurn,
+    getJSON,
+    currentPlace,
+    currentDescription
+}

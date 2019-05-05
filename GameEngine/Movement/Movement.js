@@ -1,13 +1,11 @@
-const {clientArray} = require('./Client-Server/Server.js');
-
 function travel(){
     for(var i = 0; i < clientArray.length; i++){
-        vote(clientArray[i]);
+        vote();
     }
     
 }
 
-function vote(character, NESW){
+function vote(){
     direction(NESW);
 }
 
@@ -20,4 +18,4 @@ function direction(NESW){
     }
 }
 
-module.exports = {travel, vote, direction}
+module.exports = {travel}
